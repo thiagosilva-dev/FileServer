@@ -1,0 +1,18 @@
+
+  smbpasswd –a [nome_do_usuario]
+
+Para se excluir um usuário usa-se o comando smbpasswd da sequinte forma:
+
+  smbpasswd –x [nome_do_usuario]
+
+Para desativar um usuário usamos:
+
+  smbpasswd –d [nome_do_usuario]
+
+E para habilitá-lo usamos:
+
+  smbpasswd –e [nome_do_usuario]
+
+Para alterarmos a senha de um usuário do samba usamos:
+
+  smbpasswd –U [nome_do_usuario]
