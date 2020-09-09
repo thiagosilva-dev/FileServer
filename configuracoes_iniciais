@@ -1,0 +1,42 @@
+Configuração do servidor de arquivos Ubuntu 20.04 lts
+
+Comandos basico:
+
+    #Instalar o Samba(simulador de diretorios em rede windowns)
+      sudo apt-get install samba    
+      
+    #Reiniciar serviço do samba
+      sudo service smbd restart
+
+    #Criar usuarios no servidor
+      sudo adduser "nome do usuario"      
+
+    #Criar grupo de usuarios no servidor
+      sudo groupadd "nome do grupo"
+      
+    #Acessar o arquivo de usuarios e grupos
+      nano /etc/group
+      
+    #Adicionar usuarios do servidor ao samba
+      smbpasswd -a "nome do usuario ja criado anteriormente"
+      
+    #Acessar arquivo de configuração do samba
+      nano /etc/samba/smb.conf
+      
+    #Vincular as permições de um diretorio a determinado grupo
+      sudo chgrp -R "nome do grupo" "nome ou caminho do diretorio seguido de '/'"
+            ex: sudo chgrp -R Diretoria Diretoria/
+    
+    #Verificar qual grupo ou usuario tem permições sobre esse diretorio
+      sudo ls -la
+    
+    #Liberar todas permições para o diretorio
+      sudo chmod 777 "nome do diretorio seguido de '/' ou * para incluir todos os diretorios"
+      sudo chmod 770 "nome do diretorio seguido de '/' ou * para incluir todos os diretorios" bloqueia convidado
+      
+    
+     
+    
+      
+        
+      
